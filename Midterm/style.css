@@ -1,41 +1,126 @@
-/* Add Background Image here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
-    background-image: url('images/Silo-Poster.png');
-    background-size: 1200px;      /* Cover the entire element */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Don't repeat the image */
-    background-attachment: fixed;
-
-
-
-header {
-    padding: 5px;
-
+    background-color: #f5f5f5;
+    color: #000;
 }
 
-p {
-    width: 55%;
-}
-img {
-    width: 600px;
+.banner {
+    background: url('images/Silo-Poster.png') no-repeat center center/cover;
+    height: 800px;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    color: white;
+    position: relative;
 }
 
-/* Episode page styles */
+.banner-content {
+    max-width: 600px;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+    background: rgba(43, 43, 43, 0.35);
+    border-radius: 10px; 
+    padding: 20px;
+    font-weight: light;
+}
+
+.watch-button {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.watch-button:hover {
+    background: white;
+}
+
+.show-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.show-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-title {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 0px 10px 0px;
+}
 
 .episodes {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .episode-card {
-    width: 300px;
-    margin: 20px;
+    background: white;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .episode-card img {
     width: 100%;
+    border-radius: 5px 5px 0 0;
 }
 
-.episode-card p, .episode-card h4 {
-    margin: 1em;
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+}
+
+nav {
+    display: inline-block;
+    background: rgba(43, 43, 43, 0.35);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
