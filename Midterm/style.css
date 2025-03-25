@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #181818;
     color: #000;
 }
 
@@ -25,21 +25,21 @@ body {
 }
 
 .title {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: bold;
 }
 
 .subtitle {
     font-size: 18px;
     margin-bottom: 15px;
-    background: rgba(43, 43, 43, 0.35);
+    background: rgba(43, 43, 43, 0.10);
     border-radius: 10px; 
     padding: 20px;
     font-weight: light;
 }
 
 .watch-button {
-    background: rgba(255, 255, 255, 0.8);
+    background: #E5E4E6;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -67,6 +67,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     padding: 10px 0px 10px 0px;
+    color: #fffffc;
 }
 
 .episodes {
@@ -77,18 +78,18 @@ body {
 }
 
 .episode-card {
-    background: white;
+    background: #2a2a2a;
     width: 30%;
-    text-align: center;
+    text-align: left;
     border-radius: 5px;
-    padding-bottom: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    padding: 15px;
 }
 
 .episode-card img {
     width: 100%;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 5px 5px;
 }
 
 footer {
@@ -124,3 +125,22 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+h4 {
+    padding: 10px;
+    color: #fffffc;
+    text-align: left;
+}
+h3 {
+    color: #fffffc;
+    padding: 10px;
+}
+p {
+    color: #fffffc;
+}
+
+@media screen and (max-width:660px) {
+    .episode-card {
+        flex: 1 1 auto;
+    }
+
+} /*closing the media query*/
