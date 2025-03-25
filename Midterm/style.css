@@ -1,8 +1,41 @@
+/* Add Background Image here */
+body {
+    background-image: url('images/Silo-Poster.png');
+    background-size: 1200px;      /* Cover the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    background-attachment: fixed;
+
+
+
 header {
     padding: 5px;
 
 }
 
 p {
-    width: 30%;
+    width: 55%;
+}
+img {
+    width: 600px;
+}
+
+/* Episode page styles */
+
+.episodes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.episode-card {
+    width: 300px;
+    margin: 20px;
+}
+
+.episode-card img {
+    width: 100%;
+}
+
+.episode-card p, .episode-card h4 {
+    margin: 1em;
 }
