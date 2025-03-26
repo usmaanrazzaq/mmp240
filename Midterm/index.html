@@ -3,88 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Silo - Show Info</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #181818;
+            color: #fffffc;
+        }
+        .header {
+            padding: 15px;
+            background-color: black;
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('images/Silo-Poster.png') no-repeat center center/cover;
+            height: 750px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            text-align: left;
+            padding: 40px;
+            position: relative;
+        }
+        .hero-content {
+            max-width: 600px;
+        }
+        .hero h1 {
+            font-size: 80px;
+            font-weight: 900;
+            margin: 10px 0;
+        }
+        .button {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px;
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .info div {
+            width: 48%;
+        }
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: black;
+            margin-top: 20px;
+        }
+
+        nav {
+            display: inline-block;
+            background: #181818;
+            color: white;
+            padding: 1em 3em;
+            border-radius: 5px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .button a:hover {
+            color: #e5e4e6;
+        }
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        h5 {
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        p {
+            width: 70%;
+        }
+    </style>
 </head>
 <body>
     <div id="wrapper">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>SILO</h1>
+            <button class="button">Watch Now</button>
+        </div>
+        </div>
     </div>
-    <header class="banner">
-        <div class="banner-content">
-            <h1 class="title">Silo</h1>
-            <p class="subtitle">In a ruined and toxic future, a community exists in a giant underground silo that plunges hundreds of stories deep; there, people live in a society full of regulations they believe are meant to protect them.</p>
-            <button class="watch-button">Watch Now</button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="episodes.html">Episodes</a></li>
-                    <li><a href="more.html">More like this</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <main class="show-container">
-        <div class="show-header">
-            <h2 class="show-title">Silo Episodes</h2>
-        </div>
-        <h3>Season 1</h3>
-        <div class="episodes">
-            <div class="episode-card">
-                <img src="images/Silo-Ep-1-Cover.jpg" alt="Episode 1 cover">
-                <h4>Ep.1 Freedom Day</h4>
-                <p>Sheriff Becker's plans for the future are thrown off course after his wife meets a hacker with information about the silo.</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="episodes.html">Episodes</a></li>
+            <li><a href="more.html">More like this</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Silo</h2>
+        <h5>2 Seasons</h5>
+        <p>In a ruined and toxic future, a community exists in a giant underground silo that plunges hundreds of stories deep; there, people live in a society full of regulations they believe are meant to protect them.</p>
+        <div class="info">
+            <div>
+                <p><strong>Released:</strong> 2023</p>
+                <p><strong>Rated:</strong> TV-MA</p>
+                <p><strong>Regions of Origin:</strong> United States, United Kingdom, Canada</p>
             </div>
-            <div class="episode-card">
-                <img src="images/Silo-Ep-2-Cover.jpg" alt="Episode 2 cover">
-                <h4>Ep.2 Holston's Pick</h4>
-                <p>Juliette, an engineer, pieces together the events that might have led to a co-worker's mysterious death.</p>
-            </div>
-            <div class="episode-card">
-                <img src="https://fakeimg.pl/300x200" alt="">
-                <h4>Ep.3 Machines</h4>
-                <p>In her hunt for a new sheriff, Mayor Jahns clashes with Bernard. Juliette strikes a deal to keep the generator running.</p>
-            </div>
-            <div class="episode-card">
-                <img src="https://fakeimg.pl/300x200" alt="">
-                <h4>Truth</h4>
-                <p>Juliette tries to gain the trust of Deputy Marnes as they work to uncover the truth about recent tragedies.</p>
-            </div>
-            <div class="episode-card">
-                <img src="https://fakeimg.pl/300x200" alt="">
-                <h4>The Janitor's Boy</h4>
-                <p>Sims appoints Billings as chief deputy to keep tabs on Juliette, whose efforts to solve two murders lead to a showdown.</p>
-            </div>
-            <div class="episode-card">
-                <img src="https://fakeimg.pl/300x200" alt="">
-                <h4>The Relic</h4>
-                <p>During her investigation, Juliette uncovers disturbing secrets about someone she thought she knew.</p>
-            </div>
-            <div class="episode-card">
-                <img src="https://fakeimg.pl/300x200" alt="">
-                <h4>The Flamekeepers</h4>
-                <p>Bernard seeks Juliette's cooperation as he grows increasingly concerned about the silo's security. Juliette asks her father for a favor.</p>
-            </div>
-            <div class="episode-card">
-                <img src="https://fakeimg.pl/300x200" alt="">
-                <h4>Hanna</h4>
-                <p>New information causes Juliette to see her family's past differently - and she finally gains access to the silo's biggest </p>
-            </div>
-            <div class="episode-card">
-                <img src="https://fakeimg.pl/300x200" alt="">
-                <h4>The Getaway</h4>
-                <p>Racked with guilt, Billings sets off on a personal mission, only to discover a mind-blowing clue from Juliette. </p>
-            </div>
-            <div class="episode-card">
-                <img src="https://fakeimg.pl/300x200" alt="">
-                <h4>Outside</h4>
-                <p>Season finale. Juliette's fate seems sealed when certain truths finally come to light.</p>
+            <div>
+                <p><strong>Starring:</strong> Rebecca Ferguson, Tim Robbins, Common, Harriet Walter, David Oyelowo, Rashida Jones, Avi Nash, Chinaza Uche, Steve Zahn, Iain Glen, Rick Gomez, Shane McRae, Remmie Milner, Alexandria Riley, Clare Perkins, Billy Postlethwaite, Chipo Chung, Caitlin Zoz, Tanya Moodie.</p>
+                <p><strong>Rating:</strong> 14+ (Sci-fi puzzle box has strong language, tension, peril)</p>
             </div>
         </div>
-    </main>
-
-    <footer>
+    </div>
+    <div class="footer">
         <p>&copy; 2025 Silo. All rights reserved.</p>
-    </footer>
+    </div>
 </body>
 </html>
