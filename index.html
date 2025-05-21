@@ -39,6 +39,11 @@
         <header>
             <nav class="navbar">
                 <div class="logo"><a href="index.html">Usmaan Razzaq</a></div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul class="nav-links">
                   <li><a href="https://github.com/usmaanrazzaq">Github</a></li>
                   <li><a href="mailto:usmaanrazzaq.designs@gmail.com">Email</a></li>
@@ -84,6 +89,15 @@
         </ul>
     </nav> 
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
