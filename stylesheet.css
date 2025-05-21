@@ -1,37 +1,53 @@
+body {
+    margin: auto;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
     font-size: 30px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
+    color: #2b2b2b;
 }
 
 p {
-  font-family:Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #2b2b2b;
+    width: 55%;
+    padding: 10px;
 }
 
 .dropbtn {
-    background-color:#fff;
+    background-color: none;
     font-size: 16px;
     padding: 8px 55px;
-    border: 1px solid #2b2b2b;
+    text-decoration: underline;
     border-radius: 50px;
     cursor: dot;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 5px;
+    color: #2b2b2b;
 }
 
 .dropdown-content {
     display: none;
-    position:absolute;
-    background-color:#fff;
+    position: absolute;
+    left: 0;
+    background-color: none;
     min-width: 200px;
     box-shadow: 0px 8px 16px #2b2b2b(0,0,0,0,2);
     z-index: 2;
     border-radius: 12px;
+    color: #2b2b2b;
+}
+
+.dropdown-content li {
+    list-style-type: none;
+    align-items: flex-start;
 }
 
 .dropdown-content a {
@@ -39,10 +55,10 @@ p {
     color: #2b2b2b;
     padding: 10px 25px;
     text-decoration: none;
-    }
+}
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    color: #44617b;
 }
 
 .dropdown:hover .dropdown-content {
@@ -50,91 +66,117 @@ p {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #f1f1f1;
+    color: #2b2b2b;
 }
 
-.dropdown-container {
+.navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 15px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #2b2b2b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: #44617b;
+}
+
+.nav-list {
+    display: flex;
     justify-content: flex-start;
     gap: 20px;
-    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#top-nav {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-#top-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 1rem;
-}
-
-#top-nav a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease;
-  font-family:Arial, Helvetica, sans-serif
-}
-
-#top-nav a:hover {
-  color: #4D80E6; 
-}
-
-
-/* .dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
-} */
-
+    text-align: left;
+}
 
 @media screen and (max-width: 768px) {
-    .dropdown-container {
+    .nav-list {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        gap: 20px;
     }
     
     .dropdown {
         width: 100%;
+        text-align: center;
     }
     
     .dropbtn {
         width: 100%;
-        justify-content: flex-start;
+        justify-content: center;
     }
 }
 
+/* Animated vibrant mesh background with color transitions */
 .animated-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Keep it behind your content */
-    background: radial-gradient(circle at 20% 30%, #343C60 0%, transparent 60%),
-                radial-gradient(circle at 70% 40%, #343C60 0%, transparent 60%),
-                radial-gradient(circle at 60% 80%, #fbfaf5 0%, transparent 60%),
-                radial-gradient(circle at 30% 70%, #000b00 0%, transparent 60%);
-    animation: moveGradient 20s ease-in-out infinite;
-    background-size: 200% 200%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(900px circle at 40% 40%, #44617b, transparent 20%),
+              radial-gradient(900px circle at 80% 30%, #6c848d, transparent 20%),
+              radial-gradient(900px circle at 50% 50%, #16160e, transparent 20%);
+  background-size: 200% 200%;
+  animation: moveMesh 10s ease-in-out infinite;
+  filter: blur(80px);
+}
+
+@keyframes moveMesh {
+  0%, 100% {
+    background-position: 0% 0%;
   }
-  
-  @keyframes moveGradient {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
+  50% {
+    background-position: 100% 100%;
   }
+}
 
 /* Tabs container styles */
 .tabs {

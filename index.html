@@ -5,22 +5,49 @@
     <meta charset="UTF-8">
     <title>MMP240 Assignment 1</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        .animated-background {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: -1;
+          overflow: hidden;
+          background: radial-gradient(800px circle at 20% 20%, #44617b, transparent 70%),
+                      radial-gradient(600px circle at 80% 30%, #6c848d, transparent 70%),
+                      radial-gradient(500px circle at 50% 80%, #16160e, transparent 70%);
+          background-size: 200% 200%;
+          animation: moveMesh 20s ease-in-out infinite;
+          filter: blur(80px);
+        }
+
+        @keyframes moveMesh {
+          0%, 100% {
+            background-position: 0% 0%;
+          }
+          50% {
+            background-position: 100% 100%;
+          }
+        }
+    </style>
 </head>
 <div class="animated-background"></div>
 
 <body>
-    <div id="wrapper">
+   <div id="wrapper">
         <header>
-            <h1>Usmaan Razzaq</h1>
-            <nav id="top-nav">
-                <ul>
-                    <li><a href="mailto:usmaanrazzaq23@gmail.com">Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/usmaanrazzaq/">LinkedIn</a></li>
-                    <li><a href="https://github.com/usmaanrazzaq">GitHub</a></li>
-                    <li><a href="https://www.instagram.com/usmaanrzq/">Instagram</a></li>
+            <nav class="navbar">
+                <div class="logo"><a href="index.html">Usmaan Razzaq</a></div>
+                <ul class="nav-links">
+                  <li><a href="https://github.com/usmaanrazzaq">Github</a></li>
+                  <li><a href="mailto:usmaanrazzaq.designs@gmail.com">Email</a></li>
+                  <li><a href="https://www.linkedin.com/in/usmaanrazzaq/">LinkedIn</a></li>
+                  <li><a href="https://www.instagram.com/usmaanrzq/">Instagram</a></li>
                 </ul>
-            </nav>
+              </nav>
         </header>
+        
         <p>I am a freelance UX/UI Designer and Front-End Developer. Currently, I re-admitted back into BMCC for 2
             semsters.
             On my free time
@@ -28,38 +55,31 @@
             outside of UX/UI and Front-End dev.
             For fun, I enjoy going for runs, playing soccer, watching movies.</p>
     </div>
-
-    <div class="dropdown-container">
-        <div class="dropdown">
-            <button class="dropbtn">Excercises</button>
-            <div class="dropdown-content">
-                <li><a href="exercise2/exercise2.html">Excercise 2</a></li>
-                <li><a href="exercise3/exercise3.html">Excercise 3</a></li>
-                <li><a href="exercise4/exercise4.html">Exercise 4</a></li>
-                <li><a href="exercise5/exercise5.html">Exercise 5</a></li>
-                <li><a href="exercise6/exercise6.html">Exercise 6</a></li>
-                <li><a href="exercise7/exercise7.html">Exercise 7</a></li>
-                <li><a href="exercise8/exercise8.html">Exercise 8</a></li>
-                <li><a href="exercise9/exercise9.html">Exercise 9</a></li>
-                <li><a href="exercise10/exercise10.html">Exercise 10</a></li>
-                </ul>
-            </div>
-
-            <div class="dropdown">
-                <button class="dropbtn">Projects</button>
-                <div class="dropdown-content">
-                    <li><a href="project1/project1.html">Project 1</a></li>
-                    <li><a href="project2/project2.html">Project 2</a></li>
-                    <li><a href="project3/project3.html">Project 3</a></li>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
+    <nav class="navbar">
+        <ul class="nav-list">
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Exercises</a>
+            <ul class="dropdown-content">
+              <li><a href="exercise2/exercise2.html">Exercise 2</a></li>
+              <li><a href="exercise3/exercise3.html">Exercise 3</a></li>
+              <li><a href="exercise4/exercise4.html">Exercise 4</a></li>
+              <li><a href="exercise5/exercise5.html">Exercise 5</a></li>
+              <li><a href="exercise6/exercise6.html">Exercise 6</a></li>
+              <li><a href="exercise7/exercise7.html">Exercise 7</a></li>
+              <li><a href="exercise8/exercise8.html">Exercise 8</a></li>
+              <li><a href="exercise9/exercise9.html">Exercise 9</a></li>
+              <li><a href="exercise10/exercise10.html">Exercise 10</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Projects</a>
+            <ul class="dropdown-content">
+              <li><a href="recipe/recipe.html">Recipe</a></li>
+              <li><a href="Midterm/index.html">Midtermm</a></li>
+            </ul>
+          </li>
+        </ul>
+    </nav> 
 
 </body>
 
